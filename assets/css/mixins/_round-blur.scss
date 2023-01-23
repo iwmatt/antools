@@ -1,0 +1,25 @@
+@mixin round-blur ($size,$position, $color) {
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -9;
+        @if $position == top-right{
+            right: 0px;
+            top: 0px;
+        } @else if $position == top-left {
+            left: 0px;
+            top: 0px;
+        } @else if $position == bottom-left {
+            left: 0px;
+            bottom: 0px;
+        }
+        @else if $position == bottom-right {
+            right: 0px;
+            bottom: 0px;
+        }
+        width: $size;
+        height: $size;
+        background-color: $color;
+        filter: blur(40px);
+    }
+}
