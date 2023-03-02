@@ -24,5 +24,4 @@ $(() => {
     } else {
         console.log('swiper.js .team__swiper error')
     }
-    
 })
